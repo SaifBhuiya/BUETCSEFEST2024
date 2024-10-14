@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://djtt0rcn63l0k"
+path="res://.godot/imported/stairsStoneHandrail.obj-f4d4d10971b9dde012aa751bd8cc9f2d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/stairsStoneHandrail.obj-f4d4d10971b9dde012aa751bd8cc9f2d.mesh"]
+
+source_file="res://Assets/kenney_fantasy-town-kit/Models/OBJ format/stairsStoneHandrail.obj"
+dest_files=["res://.godot/imported/stairsStoneHandrail.obj-f4d4d10971b9dde012aa751bd8cc9f2d.mesh", "res://.godot/imported/stairsStoneHandrail.obj-f4d4d10971b9dde012aa751bd8cc9f2d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

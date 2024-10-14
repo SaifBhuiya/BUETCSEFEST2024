@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://pwywy1hf4007"
+path="res://.godot/imported/roadEdgeSlope.obj-df315da1999b9e0f123f42197e73c756.mesh"
+
+[deps]
+
+files=["res://.godot/imported/roadEdgeSlope.obj-df315da1999b9e0f123f42197e73c756.mesh"]
+
+source_file="res://Assets/kenney_fantasy-town-kit/Models/OBJ format/roadEdgeSlope.obj"
+dest_files=["res://.godot/imported/roadEdgeSlope.obj-df315da1999b9e0f123f42197e73c756.mesh", "res://.godot/imported/roadEdgeSlope.obj-df315da1999b9e0f123f42197e73c756.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dkb6bd7qmqvyp"
+path="res://.godot/imported/wallArchTop.obj-4c288d1c34edb64860a1ba466fc4887b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wallArchTop.obj-4c288d1c34edb64860a1ba466fc4887b.mesh"]
+
+source_file="res://Assets/kenney_fantasy-town-kit/Models/OBJ format/wallArchTop.obj"
+dest_files=["res://.godot/imported/wallArchTop.obj-4c288d1c34edb64860a1ba466fc4887b.mesh", "res://.godot/imported/wallArchTop.obj-4c288d1c34edb64860a1ba466fc4887b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

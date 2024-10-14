@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dindyp8fdx8l0"
+path="res://.godot/imported/stall.obj-4fed5f96bb270fd26351fec84d7938de.mesh"
+
+[deps]
+
+files=["res://.godot/imported/stall.obj-4fed5f96bb270fd26351fec84d7938de.mesh"]
+
+source_file="res://Assets/kenney_fantasy-town-kit/Models/OBJ format/stall.obj"
+dest_files=["res://.godot/imported/stall.obj-4fed5f96bb270fd26351fec84d7938de.mesh", "res://.godot/imported/stall.obj-4fed5f96bb270fd26351fec84d7938de.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

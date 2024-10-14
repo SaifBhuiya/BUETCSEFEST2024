@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bounqv4dmbg08"]
+
+[ext_resource type="Texture2D" uid="uid://d53d6kk1s2i8" path="res://Assets/Characters/indian-character-from-king-era-for-a-visual-novel-.png" id="1_mta5a"]
+
+[node name="Warrior" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_mta5a")
