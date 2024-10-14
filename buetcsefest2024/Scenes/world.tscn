@@ -1,20 +1,26 @@
-[gd_scene load_steps=4 format=3 uid="uid://c6ok345c6f678"]
+[gd_scene load_steps=9 format=3 uid="uid://c6ok345c6f678"]
 
 [ext_resource type="Texture2D" uid="uid://bnsyvayucrkww" path="res://Assets/vecteezy_ballroom-interior-in-medieval-royal-castle_15370469.jpg" id="1_5q6aw"]
+[ext_resource type="Script" path="res://Scripts/Level_1.gd" id="1_jklum"]
 [ext_resource type="PackedScene" uid="uid://c6dhyg8dfw0f6" path="res://Scenes/Doctor.tscn" id="2_ixlpa"]
 [ext_resource type="PackedScene" uid="uid://d3symr72yv6b2" path="res://Scenes/dialogue_ui.tscn" id="3_eet2m"]
+[ext_resource type="PackedScene" uid="uid://cgsasdc36nq5x" path="res://Scenes/jester.tscn" id="3_hnqi3"]
+[ext_resource type="PackedScene" uid="uid://c7ctnfh1o7j7o" path="res://Scenes/advisor.tscn" id="4_55qn0"]
+[ext_resource type="PackedScene" uid="uid://cornx7bt1cipu" path="res://Scenes/astrologer.tscn" id="5_us1il"]
+[ext_resource type="PackedScene" uid="uid://bounqv4dmbg08" path="res://Scenes/warrior.tscn" id="6_y2xqf"]
 
 [node name="World" type="Node2D"]
 
 [node name="Level1" type="Node2D" parent="."]
+script = ExtResource("1_jklum")
 
 [node name="Camera2D" type="Camera2D" parent="Level1"]
 visible = false
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Level1"]
+[node name="Background" type="CanvasLayer" parent="Level1"]
 layer = -1
 
-[node name="TextureRect" type="TextureRect" parent="Level1/CanvasLayer"]
+[node name="BG" type="TextureRect" parent="Level1/Background"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -22,22 +28,48 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_5q6aw")
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="Level1"]
+[node name="Characters_Dialogues" type="CanvasLayer" parent="Level1"]
 
-[node name="Control" type="Control" parent="Level1/CanvasLayer2"]
+[node name="Character" type="Control" parent="Level1/Characters_Dialogues"]
 layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Doctor" parent="Level1/Characters_Dialogues/Character" instance=ExtResource("2_ixlpa")]
+visible = false
+
+[node name="Jester" parent="Level1/Characters_Dialogues/Character" instance=ExtResource("3_hnqi3")]
+visible = false
+
+[node name="Advisor" parent="Level1/Characters_Dialogues/Character" instance=ExtResource("4_55qn0")]
+
+[node name="Astrologer" parent="Level1/Characters_Dialogues/Character" instance=ExtResource("5_us1il")]
+visible = false
+
+[node name="Warrior" parent="Level1/Characters_Dialogues/Character" instance=ExtResource("6_y2xqf")]
+visible = false
+
+[node name="DialogueUI" parent="Level1/Characters_Dialogues" instance=ExtResource("3_eet2m")]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -20.0
-offset_top = -40.0
-offset_right = 20.0
-grow_horizontal = 2
+offset_left = -576.0
+offset_top = -150.0
+offset_right = 576.0
 grow_vertical = 0
 
-[node name="Doctor" parent="Level1/CanvasLayer2/Control" instance=ExtResource("2_ixlpa")]
-position = Vector2(0, -290)
+[node name="Buttons" type="CanvasLayer" parent="Level1"]
 
-[node name="DialogueUI" parent="Level1/CanvasLayer2" instance=ExtResource("3_eet2m")]
+[node name="Button" type="Button" parent="Level1/Buttons"]
+offset_right = 8.0
+offset_bottom = 8.0

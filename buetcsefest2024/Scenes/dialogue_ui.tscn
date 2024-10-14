@@ -1,12 +1,38 @@
 [gd_scene format=3 uid="uid://d3symr72yv6b2"]
 
 [node name="DialogueUI" type="Control"]
+custom_minimum_size = Vector2(1152, 150)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Name" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -150.0
+offset_right = 250.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Name"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.880973, 0.812079, 0.239671, 1)
+theme_override_colors/font_selected_color = Color(0.193321, 0.507117, 0.312, 1)
+theme_override_font_sizes/normal_font_size = 35
+theme_override_font_sizes/bold_font_size = 50
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
 
 [node name="Dialogue" type="PanelContainer" parent="."]
 layout_mode = 1
@@ -20,18 +46,8 @@ grow_vertical = 0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Dialogue"]
 layout_mode = 2
-bbcode_enabled = true
-
-[node name="Name" type="PanelContainer" parent="."]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -150.0
-offset_right = 200.0
-offset_bottom = -100.0
-grow_vertical = 0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Name"]
-layout_mode = 2
+theme_override_colors/default_color = Color(0.880973, 0.812079, 0.239671, 1)
+theme_override_colors/font_selected_color = Color(0.193321, 0.507117, 0.312, 1)
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 50
 bbcode_enabled = true

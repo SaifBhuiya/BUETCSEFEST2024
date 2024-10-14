@@ -1,0 +1,49 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjwi1idqwiljw"]
+
+[ext_resource type="Script" path="res://Scripts/Intro.gd" id="1_xnf4r"]
+
+[node name="Intro" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xnf4r")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0807833, 0.0807833, 0.0807833, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -100.0
+offset_right = 300.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/italics_font_size = 25
+theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/bold_font_size = 25
+bbcode_enabled = true
+text = "[b]King Thermos:[/b]  Son, Come here.
+
+[i]Yes....... father?[/i]
+
+[b]King Thermos:[/b]  The key to all doors is... [b][wave]Kindness[/wave][/b]."
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 7.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

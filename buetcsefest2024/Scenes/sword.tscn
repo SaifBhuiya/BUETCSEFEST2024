@@ -1,12 +1,32 @@
-[gd_scene load_steps=4 format=3 uid="uid://qjktdqfu0kru"]
+[gd_scene load_steps=8 format=3 uid="uid://qjktdqfu0kru"]
 
 [ext_resource type="PackedScene" uid="uid://cjle8fciku7kp" path="res://Assets/36-sword-blend-png/Sword [blend + png]/Sword.blend" id="1_v0tiw"]
+[ext_resource type="Script" path="res://Scripts/sword.gd" id="2_7hhv8"]
 [ext_resource type="Texture2D" uid="uid://dt138vwh7hv7j" path="res://Assets/36-sword-blend-png/Sword [blend + png]/Sword_texture.png" id="2_wjqnp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nojqv"]
 albedo_texture = ExtResource("2_wjqnp")
 
-[node name="Sword2" instance=ExtResource("1_v0tiw")]
+[sub_resource type="Animation" id="Animation_dofle"]
+resource_name = "Attack"
+
+[sub_resource type="Animation" id="Animation_35xj0"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j08y6"]
+_data = {
+"Attack": SubResource("Animation_dofle"),
+"RESET": SubResource("Animation_35xj0")
+}
+
+[node name="Sword" instance=ExtResource("1_v0tiw")]
+script = ExtResource("2_7hhv8")
 
 [node name="Sword" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 surface_material_override/0 = SubResource("StandardMaterial3D_nojqv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_j08y6")
+}
