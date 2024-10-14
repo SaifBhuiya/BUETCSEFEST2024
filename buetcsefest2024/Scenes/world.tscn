@@ -9,6 +9,7 @@
 [node name="Level1" type="Node2D" parent="."]
 
 [node name="Camera2D" type="Camera2D" parent="Level1"]
+visible = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Level1"]
 layer = -1
@@ -38,6 +39,5 @@ grow_vertical = 0
 
 [node name="Doctor" parent="Level1/CanvasLayer2/Control" instance=ExtResource("2_ixlpa")]
 position = Vector2(0, -290)
-scale = Vector2(0.65, 0.65)
 
 [node name="DialogueUI" parent="Level1/CanvasLayer2" instance=ExtResource("3_eet2m")]

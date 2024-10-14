@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://qjktdqfu0kru"]
+
+[ext_resource type="PackedScene" uid="uid://cjle8fciku7kp" path="res://Assets/36-sword-blend-png/Sword [blend + png]/Sword.blend" id="1_v0tiw"]
+[ext_resource type="Texture2D" uid="uid://dt138vwh7hv7j" path="res://Assets/36-sword-blend-png/Sword [blend + png]/Sword_texture.png" id="2_wjqnp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nojqv"]
+albedo_texture = ExtResource("2_wjqnp")
+
+[node name="Sword2" instance=ExtResource("1_v0tiw")]
+
+[node name="Sword" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_nojqv")

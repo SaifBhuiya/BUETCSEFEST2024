@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://b5xqgr3nbrqq1"]
+[gd_scene load_steps=7 format=3 uid="uid://b5xqgr3nbrqq1"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_vqlbn"]
-[ext_resource type="PackedScene" uid="uid://qjktdqfu0kru" path="res://Scenes/sword.tscn" id="2_hit33"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e28du"]
 sky_top_color = Color(0.2845, 0.335486, 0.801691, 1)
@@ -50,9 +49,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22427, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
 shape = SubResource("CapsuleShape3D_b34ud")
-
-[node name="Sword2" parent="CharacterBody3D/CollisionShape3D" instance=ExtResource("2_hit33")]
-transform = Transform3D(0.0502131, -0.00995983, 0.0312961, -0.0136433, 0.045682, 0.0364282, -0.0298748, -0.0376026, 0.0359658, 0.525119, -0.0295132, -0.371227)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.480288, -5.02705)

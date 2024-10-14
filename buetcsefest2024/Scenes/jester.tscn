@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgsasdc36nq5x"]
+
+[ext_resource type="Texture2D" uid="uid://iug3hsyvhm0t" path="res://Assets/Characters/indian-jester-for-a-visual-novel-game-half-body.png" id="1_ilis7"]
+
+[node name="Jester" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("1_ilis7")

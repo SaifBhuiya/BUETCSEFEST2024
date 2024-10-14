@@ -5,5 +5,5 @@
 [node name="Advisor" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.6, 0.6)
+scale = Vector2(0.65, 0.65)
 texture = ExtResource("1_ohnnq")
