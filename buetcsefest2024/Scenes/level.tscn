@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://d18rk48602lj1"]
 
-[ext_resource type="Texture2D" uid="uid://djyqxijcyewr8" path="res://Assets/Ground.jpg" id="1_ogld6"]
+[ext_resource type="Texture2D" uid="uid://djyqxijcyewr8" path="res://Assets/Ground.jpg" id="2_38p3t"]
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="2_enxtd"]
 [ext_resource type="PackedScene" uid="uid://dnfavegy1t61t" path="res://Scenes/path.tscn" id="3_e254h"]
 
@@ -37,8 +37,8 @@ volumetric_fog_ambient_inject = 1.18
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_77mq3"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0nk0p"]
-albedo_texture = ExtResource("1_ogld6")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q5u2s"]
+albedo_texture = ExtResource("2_38p3t")
 uv1_scale = Vector3(15, 15, 15)
 
 [node name="World" type="Node3D"]
@@ -51,7 +51,7 @@ light_color = Color(0.988235, 0.917647, 0.321569, 1)
 light_energy = 1.115
 
 [node name="Camera3D" type="Camera3D" parent="Level"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 2, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 script = ExtResource("2_enxtd")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Level"]
@@ -61,6 +61,7 @@ environment = SubResource("Environment_apyk5")
 transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
 use_collision = true
 mesh = SubResource("PlaneMesh_77mq3")
-material = SubResource("StandardMaterial3D_0nk0p")
+material = SubResource("StandardMaterial3D_q5u2s")
 
 [node name="Path" parent="Level" instance=ExtResource("3_e254h")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)

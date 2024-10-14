@@ -4,6 +4,7 @@ var speed = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	#pass
 	get_parent().get_node("Path").get_child(0).get_node("PathFollower").get_child(0).remote_path = self.get_path()
 
 
@@ -12,11 +13,11 @@ func _process(delta: float) -> void:
 		
 	
 	if (Input.is_action_just_pressed("move_forward")):
-		speed = 1
-		self.fov += 2
+		speed = .1
+		#self.fov += 2
 	if (Input.is_action_just_pressed("move_back")):
 		speed = 0
-		self.fov -= 2
+		#self.fov -= 2
 		
 			
 		
@@ -30,15 +31,15 @@ func _process(delta: float) -> void:
 			get_parent().get_node("Path").get_child(0).get_node("PathFollower").h_offset -= 1
 	
 	get_parent().get_node("Path").get_child(0).get_node("PathFollower").progress += speed
-	print(speed)
+	#print(speed)
 	
 #
-#func _input(event):	
-	#
-	#if(event is InputEventMouseMotion):
-		#
-		#rotate_y(deg_to_rad(-event.relative.x * .1))
-		#rotation.y = clamp (rotation.y,deg_to_rad(-15),deg_to_rad(15))
+func _input(event):	
+	
+	if(event is InputEventMouseMotion):
+		
+		rotate_y(deg_to_rad(-event.relative.x * .1))
+		rotation.y = clamp (rotation.y,deg_to_rad(-15),deg_to_rad(15))
 	
 		
 		
