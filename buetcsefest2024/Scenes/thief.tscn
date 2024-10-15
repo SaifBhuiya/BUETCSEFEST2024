@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcum03snkpbty"]
+
+[ext_resource type="Texture2D" uid="uid://ce70qxc8gxuqj" path="res://Assets/Characters/indian-peasant-thief-for-a-visual-novel-game-half- (2).png" id="1_so2um"]
+
+[node name="Thief" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("1_so2um")

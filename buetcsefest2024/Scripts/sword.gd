@@ -1,5 +1,6 @@
 extends Node3D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var timer: Timer = $Timer
 
 
 # Called when the node enters the scene tree for the first time.
@@ -9,7 +10,18 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if(!timer.is_stopped()):
+		rotate_z(timer.time_left*delta*2)
+		
 	if (Input.is_action_just_pressed("attack")):
-		animation_player.current_animation = "SphereAction_001"
-		animation_player.play()
+		if(timer.is_stopped()):
+			timer.start()
+		
+		
 		print("attack")
+
+
+
+func _on_timer_timeout() -> void:
+	timer.stop()
+	print("done")

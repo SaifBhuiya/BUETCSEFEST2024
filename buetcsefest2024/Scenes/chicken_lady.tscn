@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdxa0x5qmjvvo"]
+
+[ext_resource type="Texture2D" uid="uid://qlr7gy7iv5im" path="res://Assets/Characters/indian-peasant-female-chicken-farmer-for-a-visual-.png" id="1_cwhjy"]
+
+[node name="Chicken Lady" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("1_cwhjy")
