@@ -1,0 +1,213 @@
+[gd_scene load_steps=26 format=3 uid="uid://bbr5vpw0h0bls"]
+
+[ext_resource type="Script" path="res://Scripts/war_day.gd" id="1_4ntn2"]
+[ext_resource type="Script" path="res://Scripts/trustUI.gd" id="1_kbkuw"]
+[ext_resource type="Texture2D" uid="uid://t6xsqmnctdpn" path="res://Assets/ancient-throne-in-dark-egyptian-palace-at-night-free-vector.jpg" id="2_4xa3g"]
+[ext_resource type="PackedScene" uid="uid://c6dhyg8dfw0f6" path="res://Scenes/Doctor.tscn" id="3_qcyla"]
+[ext_resource type="PackedScene" uid="uid://cgsasdc36nq5x" path="res://Scenes/jester.tscn" id="4_viboj"]
+[ext_resource type="PackedScene" uid="uid://c7ctnfh1o7j7o" path="res://Scenes/advisor.tscn" id="5_o4fp1"]
+[ext_resource type="PackedScene" uid="uid://cornx7bt1cipu" path="res://Scenes/astrologer.tscn" id="6_w0tky"]
+[ext_resource type="PackedScene" uid="uid://bounqv4dmbg08" path="res://Scenes/warrior.tscn" id="7_wg8la"]
+[ext_resource type="PackedScene" uid="uid://cdxa0x5qmjvvo" path="res://Scenes/chicken_lady.tscn" id="8_e0gri"]
+[ext_resource type="PackedScene" uid="uid://bcum03snkpbty" path="res://Scenes/thief.tscn" id="9_6vx4m"]
+[ext_resource type="PackedScene" uid="uid://dn4gfauwyeroc" path="res://Scenes/farmer's_daughter.tscn" id="10_sbqf7"]
+[ext_resource type="PackedScene" uid="uid://c7mlg7ogd385m" path="res://Scenes/gold_seller.tscn" id="11_cy7st"]
+[ext_resource type="PackedScene" uid="uid://wpjgqmwohi06" path="res://Scenes/kaal's_messenger.tscn" id="12_1o66s"]
+[ext_resource type="PackedScene" uid="uid://dww0esqqrlruv" path="res://Scenes/little_brother.tscn" id="13_b042i"]
+[ext_resource type="PackedScene" uid="uid://fst4eajpohpv" path="res://Scenes/queen's_servant.tscn" id="14_1xgcv"]
+[ext_resource type="PackedScene" uid="uid://cexjkr0mcorow" path="res://Scenes/prisoner.tscn" id="15_jnj48"]
+[ext_resource type="PackedScene" uid="uid://bqv6shk2cak35" path="res://Scenes/queen.tscn" id="16_q8iwn"]
+[ext_resource type="PackedScene" uid="uid://bpyxfc6n31v5p" path="res://Scenes/kaal.tscn" id="17_vpc2h"]
+[ext_resource type="PackedScene" uid="uid://d3symr72yv6b2" path="res://Scenes/dialogue_ui.tscn" id="18_h253q"]
+[ext_resource type="Script" path="res://Scripts/Click.gd" id="19_47u7g"]
+[ext_resource type="PackedScene" uid="uid://cpv6ijkd46urq" path="res://Scenes/council.tscn" id="20_7wc6b"]
+[ext_resource type="AudioStream" uid="uid://x7bbs5kx2ys2" path="res://Audio/kaal.mp3" id="22_xu17m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h1wy2"]
+bg_color = Color(0.512222, 0.111849, 0.156569, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0vhay"]
+bg_color = Color(0.866667, 0.768627, 0.466667, 0.698039)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2s740"]
+bg_color = Color(0.85098, 0.752941, 0.87451, 0.862745)
+
+[node name="War Day" type="Node2D"]
+script = ExtResource("1_4ntn2")
+
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Trust" type="Label" parent="Background"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Current Trust = "
+script = ExtResource("1_kbkuw")
+
+[node name="TextureRect" type="TextureRect" parent="Background"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_4xa3g")
+
+[node name="Characters_Dialogues" type="CanvasLayer" parent="."]
+
+[node name="Character" type="Control" parent="Characters_Dialogues"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Doctor" parent="Characters_Dialogues/Character" instance=ExtResource("3_qcyla")]
+visible = false
+
+[node name="Jester" parent="Characters_Dialogues/Character" instance=ExtResource("4_viboj")]
+visible = false
+
+[node name="Advisor" parent="Characters_Dialogues/Character" instance=ExtResource("5_o4fp1")]
+visible = false
+
+[node name="Astrologer" parent="Characters_Dialogues/Character" instance=ExtResource("6_w0tky")]
+visible = false
+
+[node name="Warrior" parent="Characters_Dialogues/Character" instance=ExtResource("7_wg8la")]
+visible = false
+
+[node name="Chicken Lady" parent="Characters_Dialogues/Character" instance=ExtResource("8_e0gri")]
+visible = false
+
+[node name="Thief" parent="Characters_Dialogues/Character" instance=ExtResource("9_6vx4m")]
+visible = false
+
+[node name="Farmer\'s Daughter" parent="Characters_Dialogues/Character" instance=ExtResource("10_sbqf7")]
+visible = false
+
+[node name="Gold Seller" parent="Characters_Dialogues/Character" instance=ExtResource("11_cy7st")]
+visible = false
+
+[node name="Kaal\'s Messenger" parent="Characters_Dialogues/Character" instance=ExtResource("12_1o66s")]
+visible = false
+
+[node name="LittleBrother" parent="Characters_Dialogues/Character" instance=ExtResource("13_b042i")]
+visible = false
+
+[node name="Queen\'s Servant" parent="Characters_Dialogues/Character" instance=ExtResource("14_1xgcv")]
+visible = false
+
+[node name="Prisoner" parent="Characters_Dialogues/Character" instance=ExtResource("15_jnj48")]
+visible = false
+
+[node name="Queen" parent="Characters_Dialogues/Character" instance=ExtResource("16_q8iwn")]
+visible = false
+
+[node name="Kaal" parent="Characters_Dialogues/Character" instance=ExtResource("17_vpc2h")]
+
+[node name="DialogueUI" parent="Characters_Dialogues" instance=ExtResource("18_h253q")]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+offset_left = -576.0
+offset_top = -150.0
+offset_right = 576.0
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Characters_Dialogues/DialogueUI"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -145.0
+offset_top = -23.0
+offset_right = -16.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Click to continue"
+horizontal_alignment = 2
+vertical_alignment = 1
+script = ExtResource("19_47u7g")
+
+[node name="Council" parent="Characters_Dialogues" instance=ExtResource("20_7wc6b")]
+visible = false
+
+[node name="Options" type="CanvasLayer" parent="."]
+
+[node name="Kaal" type="Label" parent="Options"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.0
+offset_top = -11.5
+offset_right = 37.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_h1wy2")
+text = "    PICK ONE    "
+
+[node name="A" type="Button" parent="Options/Kaal"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = 25.0
+offset_right = 200.0
+offset_bottom = 85.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(0.597783, 0.201709, 0.255474, 1)
+theme_override_colors/font_color = Color(0.231373, 0.027451, 0.0509804, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/hover = SubResource("StyleBoxFlat_0vhay")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2s740")
+text = "ATTACK"
+
+[node name="B" type="Button" parent="Options/Kaal"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = 90.0
+offset_right = 200.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(0.597783, 0.201709, 0.255474, 1)
+theme_override_colors/font_color = Color(0.231373, 0.027451, 0.0509804, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/hover = SubResource("StyleBoxFlat_0vhay")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2s740")
+text = "BARGAIN"
+
+[node name="Kaal" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("22_xu17m")
+autoplay = true
+
+[connection signal="pressed" from="Options/Kaal/A" to="." method="_on_a_pressed"]
+[connection signal="pressed" from="Options/Kaal/B" to="." method="_on_b_pressed"]

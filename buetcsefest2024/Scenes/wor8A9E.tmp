@@ -1,0 +1,268 @@
+[gd_scene load_steps=16 format=3 uid="uid://c6ok345c6f678"]
+
+[ext_resource type="Texture2D" uid="uid://bnsyvayucrkww" path="res://Assets/vecteezy_ballroom-interior-in-medieval-royal-castle_15370469.jpg" id="1_5q6aw"]
+[ext_resource type="Script" path="res://Scripts/Level_1.gd" id="1_jklum"]
+[ext_resource type="PackedScene" uid="uid://c6dhyg8dfw0f6" path="res://Scenes/Doctor.tscn" id="2_ixlpa"]
+[ext_resource type="PackedScene" uid="uid://d3symr72yv6b2" path="res://Scenes/dialogue_ui.tscn" id="3_eet2m"]
+[ext_resource type="PackedScene" uid="uid://cgsasdc36nq5x" path="res://Scenes/jester.tscn" id="3_hnqi3"]
+[ext_resource type="PackedScene" uid="uid://c7ctnfh1o7j7o" path="res://Scenes/advisor.tscn" id="4_55qn0"]
+[ext_resource type="PackedScene" uid="uid://cornx7bt1cipu" path="res://Scenes/astrologer.tscn" id="5_us1il"]
+[ext_resource type="PackedScene" uid="uid://bounqv4dmbg08" path="res://Scenes/warrior.tscn" id="6_y2xqf"]
+[ext_resource type="PackedScene" uid="uid://cdxa0x5qmjvvo" path="res://Scenes/chicken_lady.tscn" id="8_mcqx4"]
+[ext_resource type="PackedScene" uid="uid://bcum03snkpbty" path="res://Scenes/thief.tscn" id="9_glv2w"]
+[ext_resource type="PackedScene" uid="uid://dn4gfauwyeroc" path="res://Scenes/farmer's_daughter.tscn" id="10_5jeqc"]
+[ext_resource type="PackedScene" uid="uid://c7mlg7ogd385m" path="res://Scenes/gold_seller.tscn" id="11_t2sof"]
+[ext_resource type="PackedScene" uid="uid://wpjgqmwohi06" path="res://Scenes/kaal's_messenger.tscn" id="12_f5n3e"]
+[ext_resource type="PackedScene" uid="uid://cpv6ijkd46urq" path="res://Scenes/council.tscn" id="12_uto68"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0kwj5"]
+bg_color = Color(0.67451, 0.223529, 0.168627, 1)
+
+[node name="World" type="Node2D"]
+
+[node name="Level1" type="Node2D" parent="."]
+script = ExtResource("1_jklum")
+
+[node name="Camera2D" type="Camera2D" parent="Level1"]
+visible = false
+
+[node name="Background" type="CanvasLayer" parent="Level1"]
+layer = -1
+
+[node name="BG" type="TextureRect" parent="Level1/Background"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_5q6aw")
+
+[node name="Characters_Dialogues" type="CanvasLayer" parent="Level1"]
+
+[node name="Character" type="Control" parent="Level1/Characters_Dialogues"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Doctor" parent="Level1/Characters_Dialogues/Character" instance=ExtResource("2_ixlpa")]
+visible = false
+
+[node name="Jester" parent="Level1/Characters_Dialogues/Character" instance=ExtResource("3_hnqi3")]
+visible = false
+
+[node name="Advisor" parent="Level1/Characters_Dialogues/Character" instance=ExtResource("4_55qn0")]
+
+[node name="Astrologer" parent="Level1/Characters_Dialogues/Character" instance=ExtResource("5_us1il")]
+visible = false
+
+[node name="Warrior" parent="Level1/Characters_Dialogues/Character" instance=ExtResource("6_y2xqf")]
+visible = false
+
+[node name="Chicken Lady" parent="Level1/Characters_Dialogues/Character" instance=ExtResource("8_mcqx4")]
+visible = false
+
+[node name="Thief" parent="Level1/Characters_Dialogues/Character" instance=ExtResource("9_glv2w")]
+visible = false
+
+[node name="Farmer\'s Daughter" parent="Level1/Characters_Dialogues/Character" instance=ExtResource("10_5jeqc")]
+visible = false
+
+[node name="Gold Seller" parent="Level1/Characters_Dialogues/Character" instance=ExtResource("11_t2sof")]
+visible = false
+
+[node name="Kaal\'s Messenger" parent="Level1/Characters_Dialogues/Character" instance=ExtResource("12_f5n3e")]
+visible = false
+
+[node name="DialogueUI" parent="Level1/Characters_Dialogues" instance=ExtResource("3_eet2m")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+offset_left = -600.0
+offset_top = -150.0
+offset_right = 552.0
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="Level1/Characters_Dialogues/DialogueUI"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -145.0
+offset_top = -23.0
+offset_right = -16.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Click to continue"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Council" parent="Level1/Characters_Dialogues" instance=ExtResource("12_uto68")]
+visible = false
+
+[node name="Buttons" type="CanvasLayer" parent="Level1"]
+
+[node name="Investigate" type="Button" parent="Level1/Buttons"]
+visible = false
+custom_minimum_size = Vector2(300, 100)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -350.0
+offset_top = -200.0
+offset_right = -50.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 35
+text = "Investigate"
+
+[node name="Punish" type="Button" parent="Level1/Buttons"]
+visible = false
+custom_minimum_size = Vector2(300, 100)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = -200.0
+offset_right = 350.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 35
+text = "Punish
+"
+
+[node name="QuestionsL" type="ItemList" parent="Level1/Buttons"]
+visible = false
+custom_minimum_size = Vector2(300, 100)
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -250.0
+offset_right = 500.0
+offset_bottom = -150.0
+grow_vertical = 0
+theme_override_colors/guide_color = Color(0.643137, 0.717647, 0, 1)
+theme_override_colors/font_outline_color = Color(0.715264, 0.380829, 0.385566, 1)
+theme_override_colors/font_selected_color = Color(0.519439, 0.14237, 0.135576, 1)
+theme_override_colors/font_color = Color(0.851165, 0.886093, 0.435929, 1)
+theme_override_colors/font_hovered_color = Color(0.621177, 0.884013, 0.733387, 1)
+theme_override_constants/v_separation = 15
+theme_override_font_sizes/font_size = 18
+allow_reselect = true
+item_count = 2
+item_0/text = "When was the chicken stole?"
+item_1/text = "How many chickens do you own?"
+
+[node name="QuestionsR" type="ItemList" parent="Level1/Buttons"]
+visible = false
+custom_minimum_size = Vector2(300, 100)
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -500.0
+offset_top = -250.0
+offset_bottom = -150.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/guide_color = Color(0.643137, 0.717647, 0, 1)
+theme_override_colors/font_outline_color = Color(0.715264, 0.380829, 0.385566, 1)
+theme_override_colors/font_selected_color = Color(0.519439, 0.14237, 0.135576, 1)
+theme_override_colors/font_color = Color(0.851165, 0.886093, 0.435929, 1)
+theme_override_colors/font_hovered_color = Color(0.621177, 0.884013, 0.733387, 1)
+theme_override_constants/v_separation = 15
+theme_override_font_sizes/font_size = 18
+allow_reselect = true
+item_count = 2
+item_0/text = "What were you doing in the afternoon?"
+item_1/text = "How did you know she has three chickens in her farm?"
+
+[node name="Done" type="Button" parent="Level1/Buttons"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -50.0
+offset_right = 150.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 35
+text = "Back"
+
+[node name="PunishA" type="Button" parent="Level1/Buttons"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -428.0
+offset_top = 175.0
+offset_right = -172.0
+offset_bottom = 225.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(0, 0.909804, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0.92549, 1)
+theme_override_colors/icon_pressed_color = Color(0.909804, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0.929412, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.913725, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0.933333, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_0kwj5")
+text = "Punish Chicken Lady"
+
+[node name="PunishB" type="Button" parent="Level1/Buttons"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 172.0
+offset_top = 175.0
+offset_right = 428.0
+offset_bottom = 225.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(0, 0.909804, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0.92549, 1)
+theme_override_colors/icon_pressed_color = Color(0.909804, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0.929412, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.913725, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0.933333, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_0kwj5")
+text = "Punish Thief"
+
+[connection signal="pressed" from="Level1/Buttons/Investigate" to="Level1" method="_on_investigate_pressed"]
+[connection signal="pressed" from="Level1/Buttons/Punish" to="Level1" method="_on_punish_pressed"]
+[connection signal="item_selected" from="Level1/Buttons/QuestionsL" to="Level1" method="_on_questions_l_item_selected"]
+[connection signal="item_selected" from="Level1/Buttons/QuestionsR" to="Level1" method="_on_questions_r_item_selected"]
+[connection signal="pressed" from="Level1/Buttons/Done" to="Level1" method="_on_done_pressed"]
+[connection signal="pressed" from="Level1/Buttons/PunishA" to="Level1" method="_on_punish_a_pressed"]
+[connection signal="pressed" from="Level1/Buttons/PunishB" to="Level1" method="_on_punish_b_pressed"]

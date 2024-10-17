@@ -33,7 +33,7 @@ offset_right = 450.0
 offset_bottom = 180.0
 grow_horizontal = 2
 theme_override_font_sizes/normal_font_size = 100
-text = "KINGS AND LORDS"
+text = "The Young King"
 
 [node name="Start Game" type="Button" parent="CanvasLayer"]
 anchors_preset = 14
@@ -58,6 +58,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 50
 text = "Quit Game"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 
 [connection signal="pressed" from="CanvasLayer/Start Game" to="." method="_on_start_game_pressed"]
 [connection signal="pressed" from="CanvasLayer/Quit Game" to="." method="_on_quit_game_pressed"]

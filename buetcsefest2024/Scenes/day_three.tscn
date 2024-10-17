@@ -1,0 +1,268 @@
+[gd_scene load_steps=26 format=3 uid="uid://bvq3s5480icvq"]
+
+[ext_resource type="Texture2D" uid="uid://bnsyvayucrkww" path="res://Assets/vecteezy_ballroom-interior-in-medieval-royal-castle_15370469.jpg" id="1_5ts3s"]
+[ext_resource type="Script" path="res://Scenes/day_three.gd" id="1_chd87"]
+[ext_resource type="Script" path="res://Scripts/trustUI.gd" id="2_06a02"]
+[ext_resource type="PackedScene" uid="uid://c6dhyg8dfw0f6" path="res://Scenes/Doctor.tscn" id="4_bdf7o"]
+[ext_resource type="PackedScene" uid="uid://cgsasdc36nq5x" path="res://Scenes/jester.tscn" id="5_smqvg"]
+[ext_resource type="PackedScene" uid="uid://c7ctnfh1o7j7o" path="res://Scenes/advisor.tscn" id="6_vbh05"]
+[ext_resource type="PackedScene" uid="uid://cornx7bt1cipu" path="res://Scenes/astrologer.tscn" id="7_ljckq"]
+[ext_resource type="PackedScene" uid="uid://bounqv4dmbg08" path="res://Scenes/warrior.tscn" id="8_oux52"]
+[ext_resource type="PackedScene" uid="uid://cdxa0x5qmjvvo" path="res://Scenes/chicken_lady.tscn" id="9_2eaq5"]
+[ext_resource type="PackedScene" uid="uid://bcum03snkpbty" path="res://Scenes/thief.tscn" id="10_uvxmb"]
+[ext_resource type="PackedScene" uid="uid://dn4gfauwyeroc" path="res://Scenes/farmer's_daughter.tscn" id="11_0kpa7"]
+[ext_resource type="PackedScene" uid="uid://c7mlg7ogd385m" path="res://Scenes/gold_seller.tscn" id="12_vmjri"]
+[ext_resource type="PackedScene" uid="uid://wpjgqmwohi06" path="res://Scenes/kaal's_messenger.tscn" id="13_s2flw"]
+[ext_resource type="PackedScene" uid="uid://dww0esqqrlruv" path="res://Scenes/little_brother.tscn" id="14_4cvef"]
+[ext_resource type="PackedScene" uid="uid://fst4eajpohpv" path="res://Scenes/queen's_servant.tscn" id="15_bj45a"]
+[ext_resource type="PackedScene" uid="uid://cexjkr0mcorow" path="res://Scenes/prisoner.tscn" id="16_4mc32"]
+[ext_resource type="PackedScene" uid="uid://bqv6shk2cak35" path="res://Scenes/queen.tscn" id="17_uovap"]
+[ext_resource type="PackedScene" uid="uid://d3symr72yv6b2" path="res://Scenes/dialogue_ui.tscn" id="18_3gbjn"]
+[ext_resource type="Script" path="res://Scripts/Click.gd" id="19_5d61r"]
+[ext_resource type="PackedScene" uid="uid://cpv6ijkd46urq" path="res://Scenes/council.tscn" id="20_wkq1l"]
+[ext_resource type="AudioStream" uid="uid://beq7t41k7l7r2" path="res://Audio/intel.mp3" id="21_gqhhk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0somc"]
+bg_color = Color(0.305882, 0.0980392, 0.380392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w1j3r"]
+bg_color = Color(0.512222, 0.111849, 0.156569, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6tlns"]
+bg_color = Color(0.866667, 0.768627, 0.466667, 0.698039)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3g2xd"]
+bg_color = Color(0.85098, 0.752941, 0.87451, 0.862745)
+
+[node name="Day Three" type="Node2D"]
+script = ExtResource("1_chd87")
+
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Court" type="TextureRect" parent="Background"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_5ts3s")
+metadata/_edit_use_anchors_ = true
+
+[node name="Outside" type="Button" parent="Background/Court"]
+visible = false
+custom_minimum_size = Vector2(100, 25)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -12.5
+offset_right = 50.0
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_0somc")
+text = "^ Outside ^"
+metadata/_edit_use_anchors_ = true
+
+[node name="Corridor" type="Button" parent="Background/Court"]
+visible = false
+custom_minimum_size = Vector2(100, 25)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 409.0
+offset_top = -12.5
+offset_right = 509.0
+offset_bottom = 12.5
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_0somc")
+text = "<< Corridor"
+metadata/_edit_use_anchors_ = true
+
+[node name="Prison cells" type="Button" parent="Background/Court"]
+visible = false
+custom_minimum_size = Vector2(100, 25)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -509.0
+offset_top = -12.5
+offset_right = -409.0
+offset_bottom = 12.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_0somc")
+text = "Prison Cells >>
+"
+
+[node name="Trust" type="Label" parent="Background"]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Current Trust = "
+script = ExtResource("2_06a02")
+
+[node name="Characters_Dialogues" type="CanvasLayer" parent="."]
+
+[node name="Character" type="Control" parent="Characters_Dialogues"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Doctor" parent="Characters_Dialogues/Character" instance=ExtResource("4_bdf7o")]
+visible = false
+
+[node name="Jester" parent="Characters_Dialogues/Character" instance=ExtResource("5_smqvg")]
+visible = false
+
+[node name="Advisor" parent="Characters_Dialogues/Character" instance=ExtResource("6_vbh05")]
+visible = false
+
+[node name="Astrologer" parent="Characters_Dialogues/Character" instance=ExtResource("7_ljckq")]
+visible = false
+
+[node name="Warrior" parent="Characters_Dialogues/Character" instance=ExtResource("8_oux52")]
+
+[node name="Chicken Lady" parent="Characters_Dialogues/Character" instance=ExtResource("9_2eaq5")]
+visible = false
+
+[node name="Thief" parent="Characters_Dialogues/Character" instance=ExtResource("10_uvxmb")]
+visible = false
+
+[node name="Farmer\'s Daughter" parent="Characters_Dialogues/Character" instance=ExtResource("11_0kpa7")]
+visible = false
+
+[node name="Gold Seller" parent="Characters_Dialogues/Character" instance=ExtResource("12_vmjri")]
+visible = false
+
+[node name="Kaal\'s Messenger" parent="Characters_Dialogues/Character" instance=ExtResource("13_s2flw")]
+visible = false
+
+[node name="LittleBrother" parent="Characters_Dialogues/Character" instance=ExtResource("14_4cvef")]
+visible = false
+
+[node name="Queen\'s Servant" parent="Characters_Dialogues/Character" instance=ExtResource("15_bj45a")]
+visible = false
+
+[node name="Prisoner" parent="Characters_Dialogues/Character" instance=ExtResource("16_4mc32")]
+visible = false
+
+[node name="Queen" parent="Characters_Dialogues/Character" instance=ExtResource("17_uovap")]
+visible = false
+
+[node name="DialogueUI" parent="Characters_Dialogues" instance=ExtResource("18_3gbjn")]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+offset_left = -576.0
+offset_top = -150.0
+offset_right = 576.0
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Characters_Dialogues/DialogueUI"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -145.0
+offset_top = -23.0
+offset_right = -16.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Click to continue"
+horizontal_alignment = 2
+vertical_alignment = 1
+script = ExtResource("19_5d61r")
+
+[node name="Council" parent="Characters_Dialogues" instance=ExtResource("20_wkq1l")]
+visible = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Choices" type="Label" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.0
+offset_top = -11.5
+offset_right = 37.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_w1j3r")
+text = "    PICK ONE    "
+
+[node name="A" type="Button" parent="CanvasLayer/Choices"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = 25.0
+offset_right = 200.0
+offset_bottom = 85.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(0.597783, 0.201709, 0.255474, 1)
+theme_override_colors/font_color = Color(0.231373, 0.027451, 0.0509804, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/hover = SubResource("StyleBoxFlat_6tlns")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3g2xd")
+text = "Agree"
+
+[node name="B" type="Button" parent="CanvasLayer/Choices"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = 90.0
+offset_right = 200.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(0.597783, 0.201709, 0.255474, 1)
+theme_override_colors/font_color = Color(0.231373, 0.027451, 0.0509804, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/hover = SubResource("StyleBoxFlat_6tlns")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3g2xd")
+text = "Disagree"
+
+[node name="Intel" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("21_gqhhk")
+autoplay = true
+
+[connection signal="pressed" from="CanvasLayer/Choices/A" to="." method="_on_a_pressed"]
+[connection signal="pressed" from="CanvasLayer/Choices/B" to="." method="_on_b_pressed"]

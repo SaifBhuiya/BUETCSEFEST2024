@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dww0esqqrlruv"]
+
+[ext_resource type="Texture2D" uid="uid://b7fdweau2ipeq" path="res://Assets/Characters/indian-peasant-for-a-visual-novel-game-half-body (3).png" id="1_rgp4o"]
+
+[node name="LittleBrother" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("1_rgp4o")

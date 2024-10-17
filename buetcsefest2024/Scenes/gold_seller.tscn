@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7mlg7ogd385m"]
+
+[ext_resource type="Texture2D" uid="uid://bmugsg0e5uo1n" path="res://Assets/Characters/indian-old-man-peasant--for-a-visual-novel-game-ha (1).png" id="1_bcxgt"]
+
+[node name="Gold Seller" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("1_bcxgt")

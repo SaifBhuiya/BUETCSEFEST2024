@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c4ovdfchjb48r"
+path="res://.godot/imported/Kaal's messenger.mp3-1a9edf27408d3eaaa7fbfc7bc13a764e.mp3str"
+
+[deps]
+
+source_file="res://Audio/Kaal's messenger.mp3"
+dest_files=["res://.godot/imported/Kaal's messenger.mp3-1a9edf27408d3eaaa7fbfc7bc13a764e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpyxfc6n31v5p"]
+
+[ext_resource type="Texture2D" uid="uid://d2dke2pm5sncl" path="res://Assets/Characters/A Messenger For The Lord Of Darksfsdness For A Visual .png" id="1_kih0v"]
+
+[node name="Kaal" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("1_kih0v")

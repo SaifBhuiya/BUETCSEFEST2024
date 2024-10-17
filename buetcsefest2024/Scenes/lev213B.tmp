@@ -1,0 +1,839 @@
+[gd_scene load_steps=43 format=3 uid="uid://d3im64xvb2nyi"]
+
+[ext_resource type="Texture2D" uid="uid://bnsyvayucrkww" path="res://Assets/vecteezy_ballroom-interior-in-medieval-royal-castle_15370469.jpg" id="1_7qp28"]
+[ext_resource type="Script" path="res://Scripts/level_3_day_2.gd" id="1_olk3j"]
+[ext_resource type="Texture2D" uid="uid://cnqn7qskxsvsp" path="res://Assets/A Prison Door Inside The Palace. It Is An Illustra.png" id="2_krf07"]
+[ext_resource type="Texture2D" uid="uid://byrgycjahkq23" path="res://Assets/Prison Cell Of The Indian Palace. Illustration.png" id="3_2hdoj"]
+[ext_resource type="Texture2D" uid="uid://dqmqx1qks8jpx" path="res://Assets/cartoon-royal-bedroom-with-vintage-furniture-free-vector.jpg" id="4_0wsqy"]
+[ext_resource type="Texture2D" uid="uid://bg8ku4kt1onxc" path="res://Assets/Training Field Of The Indian Palace. Illustration.png" id="5_ggkgp"]
+[ext_resource type="Texture2D" uid="uid://bi68oyiv07wp0" path="res://Assets/Balcony Of The Indian Palace From Inside. Illustra.png" id="6_aykfp"]
+[ext_resource type="Texture2D" uid="uid://ccr0u1bjh5kgu" path="res://Assets/vecteezy_ancient-palace-or-castle-corridor-interior_23878092.jpg" id="7_8kwyd"]
+[ext_resource type="Texture2D" uid="uid://ck6ewgqxtqr6h" path="res://Assets/vecteezy_medieval-stone-castle-game-background-at-night_23869976.jpg" id="8_hsysc"]
+[ext_resource type="Texture2D" uid="uid://c5hcoqyxemowv" path="res://Assets/vecteezy_ancient-architecture-with-arches-and-torches_13961672.jpg" id="9_suk0c"]
+[ext_resource type="Texture2D" uid="uid://dms4opxwdfx27" path="res://Assets/medieval-castle-dungeon-wall-game-cartoon-free-vector.jpg" id="10_rvjgo"]
+[ext_resource type="Texture2D" uid="uid://bmbbb23ouhru8" path="res://Assets/dark-medieval-castle-dungeon-and-empty-prison-cell-free-vector.jpg" id="11_63dib"]
+[ext_resource type="Texture2D" uid="uid://qbsvdrp5hf0e" path="res://Assets/abandoned-castle-cave-for-medieval-game-cartoon-free-vector.jpg" id="12_yu1jn"]
+[ext_resource type="Texture2D" uid="uid://dcs4dvvslahja" path="res://Assets/medieval-castle-gate-at-night-palace-exterior-free-vector.jpg" id="13_hfsv8"]
+[ext_resource type="Texture2D" uid="uid://c1d7yahqssfec" path="res://Assets/Prison Cell Of The Indian Palace. Illustration (1).png" id="14_tjfrn"]
+[ext_resource type="Texture2D" uid="uid://crn0um4l7xwlj" path="res://Assets/vecteezy_castle-dungeon-interior-with-torches_20237170.jpg" id="15_o4qa3"]
+[ext_resource type="Texture2D" uid="uid://bnwpe8no7k6tm" path="res://Assets/A Corridor Inside A Palace. It Is An Illustration .png" id="16_brstl"]
+[ext_resource type="PackedScene" uid="uid://c6dhyg8dfw0f6" path="res://Scenes/Doctor.tscn" id="17_yem0i"]
+[ext_resource type="PackedScene" uid="uid://dxix5ev2ft8mr" path="res://Scenes/hooded_robbers.tscn" id="18_auaom"]
+[ext_resource type="PackedScene" uid="uid://cgsasdc36nq5x" path="res://Scenes/jester.tscn" id="18_be5p2"]
+[ext_resource type="PackedScene" uid="uid://c7ctnfh1o7j7o" path="res://Scenes/advisor.tscn" id="19_ie68h"]
+[ext_resource type="PackedScene" uid="uid://cornx7bt1cipu" path="res://Scenes/astrologer.tscn" id="20_1yqop"]
+[ext_resource type="PackedScene" uid="uid://bounqv4dmbg08" path="res://Scenes/warrior.tscn" id="21_124xb"]
+[ext_resource type="PackedScene" uid="uid://cdxa0x5qmjvvo" path="res://Scenes/chicken_lady.tscn" id="22_m4dt8"]
+[ext_resource type="PackedScene" uid="uid://bcum03snkpbty" path="res://Scenes/thief.tscn" id="23_v6gpp"]
+[ext_resource type="PackedScene" uid="uid://dn4gfauwyeroc" path="res://Scenes/farmer's_daughter.tscn" id="24_4gbu4"]
+[ext_resource type="PackedScene" uid="uid://c7mlg7ogd385m" path="res://Scenes/gold_seller.tscn" id="25_2iqh1"]
+[ext_resource type="PackedScene" uid="uid://wpjgqmwohi06" path="res://Scenes/kaal's_messenger.tscn" id="26_vcje4"]
+[ext_resource type="PackedScene" uid="uid://dww0esqqrlruv" path="res://Scenes/little_brother.tscn" id="27_jopmw"]
+[ext_resource type="PackedScene" uid="uid://fst4eajpohpv" path="res://Scenes/queen's_servant.tscn" id="28_ohyfc"]
+[ext_resource type="PackedScene" uid="uid://cexjkr0mcorow" path="res://Scenes/prisoner.tscn" id="29_6j5ok"]
+[ext_resource type="PackedScene" uid="uid://d3symr72yv6b2" path="res://Scenes/dialogue_ui.tscn" id="30_n1o71"]
+[ext_resource type="Script" path="res://Scripts/Click.gd" id="31_g7pkk"]
+[ext_resource type="PackedScene" uid="uid://c1j7ta0a1wknm" path="res://Scenes/farmer.tscn" id="31_iq3xl"]
+[ext_resource type="PackedScene" uid="uid://cpv6ijkd46urq" path="res://Scenes/council.tscn" id="32_mmgae"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jee8a"]
+bg_color = Color(0.305882, 0.0980392, 0.380392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7l60s"]
+bg_color = Color(0.512222, 0.111849, 0.156569, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rhg2y"]
+bg_color = Color(0.866667, 0.768627, 0.466667, 0.698039)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v4hv4"]
+bg_color = Color(0.85098, 0.752941, 0.87451, 0.862745)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4qgac"]
+bg_color = Color(0.466667, 0.0117647, 0.188235, 0.862745)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c3wk1"]
+bg_color = Color(0.513726, 0.109804, 0.156863, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bcryd"]
+bg_color = Color(0.513726, 0.109804, 0.156863, 1)
+
+[node name="Level 3 Day 2" type="Node2D"]
+script = ExtResource("1_olk3j")
+
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Court" type="TextureRect" parent="Background"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_7qp28")
+metadata/_edit_use_anchors_ = true
+
+[node name="Outside" type="Button" parent="Background/Court"]
+visible = false
+custom_minimum_size = Vector2(100, 25)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -12.5
+offset_right = 50.0
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_jee8a")
+text = "^ Outside ^"
+
+[node name="Corridor" type="Button" parent="Background/Court"]
+visible = false
+custom_minimum_size = Vector2(100, 25)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 409.0
+offset_top = -12.5
+offset_right = 509.0
+offset_bottom = 12.5
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_jee8a")
+text = "<< Corridor"
+
+[node name="Prison cells" type="Button" parent="Background/Court"]
+visible = false
+custom_minimum_size = Vector2(100, 25)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -509.0
+offset_top = -12.5
+offset_right = -409.0
+offset_bottom = 12.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_jee8a")
+text = "Prison Cells >>
+"
+
+[node name="Moms room" type="TextureRect" parent="Background"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_krf07")
+
+[node name="Courtroom" type="Button" parent="Background/Moms room"]
+custom_minimum_size = Vector2(100, 25)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -449.0
+offset_top = -12.5
+offset_right = -349.0
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_jee8a")
+text = "<< Court"
+
+[node name="Mom\'s Room" type="Button" parent="Background/Moms room"]
+custom_minimum_size = Vector2(100, 25)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -12.5
+offset_right = 50.0
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_jee8a")
+text = "  ^ Queen Mother's Room ^  "
+
+[node name="My room" type="Button" parent="Background/Moms room"]
+visible = false
+custom_minimum_size = Vector2(100, 25)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -681.0
+offset_top = -12.5
+offset_right = -521.0
+offset_bottom = 12.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_jee8a")
+text = "To my Room >>"
+
+[node name="Corridor 2" type="TextureRect" parent="Background"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_top = -60.0
+offset_right = 96.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_2hdoj")
+
+[node name="Sleep" type="Button" parent="Background/Corridor 2"]
+custom_minimum_size = Vector2(100, 25)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -12.5
+offset_right = 50.0
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_jee8a")
+text = "My Room"
+
+[node name="Mom\'s cor" type="Button" parent="Background/Corridor 2"]
+custom_minimum_size = Vector2(100, 25)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = 274.0
+offset_right = 50.0
+offset_bottom = 299.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_jee8a")
+text = "  v To Queen Mother's Room v  "
+
+[node name="Mom\'s Room" type="TextureRect" parent="Background"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_0wsqy")
+flip_h = true
+
+[node name="backfrommomroom" type="Button" parent="Background/Mom\'s Room"]
+custom_minimum_size = Vector2(100, 25)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -122.0
+offset_right = 50.0
+offset_bottom = -97.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jee8a")
+text = "  v Corridor v  "
+
+[node name="Playground" type="TextureRect" parent="Background"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_top = -60.0
+offset_right = 96.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_ggkgp")
+
+[node name="Main Gate" type="Button" parent="Background/Playground"]
+visible = false
+custom_minimum_size = Vector2(100, 25)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = 47.5
+offset_right = 50.0
+offset_bottom = 72.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_jee8a")
+text = " ^ Gate ^ "
+
+[node name="Courtfrompg" type="Button" parent="Background/Playground"]
+custom_minimum_size = Vector2(100, 25)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = 274.0
+offset_right = 50.0
+offset_bottom = 299.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_jee8a")
+text = " v Court v "
+
+[node name="Main Gate" type="TextureRect" parent="Background"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_aykfp")
+
+[node name="Exit to corridor" type="Button" parent="Background/Main Gate"]
+custom_minimum_size = Vector2(100, 25)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = 242.5
+offset_right = 50.0
+offset_bottom = 267.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_jee8a")
+text = "  v Go Inside v "
+
+[node name="Corridor to dungeon" type="TextureRect" parent="Background"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_8kwyd")
+
+[node name="PristoCourt" type="Button" parent="Background/Corridor to dungeon"]
+custom_minimum_size = Vector2(100, 25)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -12.5
+offset_right = 50.0
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_jee8a")
+text = " ^ Enter Prison ^ "
+
+[node name="Enter Prison" type="Button" parent="Background/Corridor to dungeon"]
+custom_minimum_size = Vector2(100, 25)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = 274.0
+offset_right = 50.0
+offset_bottom = 299.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_jee8a")
+text = " v Court v "
+
+[node name="Corridor to dungeon night" type="TextureRect" parent="Background"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -384.0
+offset_right = 384.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_hsysc")
+
+[node name="Enter Dungeon" type="Button" parent="Background/Corridor to dungeon night"]
+custom_minimum_size = Vector2(100, 25)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -12.5
+offset_right = 50.0
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_jee8a")
+text = " ^ Enter Prison ^ "
+
+[node name="3 doors" type="TextureRect" parent="Background"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_suk0c")
+
+[node name="Dungeon 1" type="Button" parent="Background/3 doors"]
+custom_minimum_size = Vector2(100, 25)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 356.0
+offset_top = -12.5
+offset_right = 503.0
+offset_bottom = 12.5
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_jee8a")
+text = "<< Back to corridor
+"
+
+[node name="Dungeon 2" type="Button" parent="Background/3 doors"]
+custom_minimum_size = Vector2(100, 25)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -12.5
+offset_right = 50.0
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_jee8a")
+text = "^ Prison Cells ^"
+
+[node name="Dungeon 3" type="Button" parent="Background/3 doors"]
+custom_minimum_size = Vector2(100, 25)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -471.0
+offset_top = -12.5
+offset_right = -371.0
+offset_bottom = 12.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_jee8a")
+text = "Locked Door"
+
+[node name="Prison cell" type="TextureRect" parent="Background"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -384.0
+offset_top = -108.0
+offset_right = 384.0
+offset_bottom = 108.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_rvjgo")
+
+[node name="Prisoner" type="Button" parent="Background/Prison cell"]
+custom_minimum_size = Vector2(100, 25)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.5
+offset_top = 49.5
+offset_right = 82.5
+offset_bottom = 74.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_jee8a")
+text = "Talk To Prisoner"
+
+[node name="Cell of Guardian" type="TextureRect" parent="Background"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_63dib")
+
+[node name="Behind Locked door" type="TextureRect" parent="Background"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -384.0
+offset_right = 384.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_yu1jn")
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Prison Cell Closed" type="TextureRect" parent="Node"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -384.0
+offset_top = -36.0
+offset_right = 384.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_hfsv8")
+
+[node name="Secret doors" type="TextureRect" parent="Node"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_top = -60.0
+offset_right = 96.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_tjfrn")
+
+[node name="Dungeon Cell" type="TextureRect" parent="Node"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -384.0
+offset_top = -108.0
+offset_right = 384.0
+offset_bottom = 108.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("15_o4qa3")
+
+[node name="Corridor" type="TextureRect" parent="Node"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("16_brstl")
+expand_mode = 2
+
+[node name="Characters_Dialogues" type="CanvasLayer" parent="."]
+
+[node name="Character" type="Control" parent="Characters_Dialogues"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="hoodedRobbers" parent="Characters_Dialogues/Character" instance=ExtResource("18_auaom")]
+visible = false
+position = Vector2(0, -100)
+
+[node name="Doctor" parent="Characters_Dialogues/Character" instance=ExtResource("17_yem0i")]
+visible = false
+
+[node name="Jester" parent="Characters_Dialogues/Character" instance=ExtResource("18_be5p2")]
+visible = false
+
+[node name="Advisor" parent="Characters_Dialogues/Character" instance=ExtResource("19_ie68h")]
+visible = false
+
+[node name="Astrologer" parent="Characters_Dialogues/Character" instance=ExtResource("20_1yqop")]
+visible = false
+
+[node name="Warrior" parent="Characters_Dialogues/Character" instance=ExtResource("21_124xb")]
+visible = false
+
+[node name="Chicken Lady" parent="Characters_Dialogues/Character" instance=ExtResource("22_m4dt8")]
+visible = false
+
+[node name="Thief" parent="Characters_Dialogues/Character" instance=ExtResource("23_v6gpp")]
+visible = false
+
+[node name="Farmer\'s Daughter" parent="Characters_Dialogues/Character" instance=ExtResource("24_4gbu4")]
+visible = false
+
+[node name="Gold Seller" parent="Characters_Dialogues/Character" instance=ExtResource("25_2iqh1")]
+visible = false
+
+[node name="Kaal\'s Messenger" parent="Characters_Dialogues/Character" instance=ExtResource("26_vcje4")]
+visible = false
+
+[node name="LittleBrother" parent="Characters_Dialogues/Character" instance=ExtResource("27_jopmw")]
+visible = false
+
+[node name="Queen\'s Servant" parent="Characters_Dialogues/Character" instance=ExtResource("28_ohyfc")]
+visible = false
+
+[node name="Prisoner" parent="Characters_Dialogues/Character" instance=ExtResource("29_6j5ok")]
+visible = false
+
+[node name="Farmer" parent="Characters_Dialogues/Character" instance=ExtResource("31_iq3xl")]
+visible = false
+
+[node name="DialogueUI" parent="Characters_Dialogues" instance=ExtResource("30_n1o71")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+offset_left = -576.0
+offset_top = -150.0
+offset_right = 576.0
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Characters_Dialogues/DialogueUI"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -145.0
+offset_top = -23.0
+offset_right = -16.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Click to continue"
+horizontal_alignment = 2
+vertical_alignment = 1
+script = ExtResource("31_g7pkk")
+
+[node name="Council" parent="Characters_Dialogues" instance=ExtResource("32_mmgae")]
+visible = false
+
+[node name="Buttons" type="CanvasLayer" parent="."]
+
+[node name="Kaal" type="Label" parent="Buttons"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.0
+offset_top = -11.5
+offset_right = 37.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_7l60s")
+text = "    PICK ONE    "
+
+[node name="A" type="Button" parent="Buttons/Kaal"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = 25.0
+offset_right = 200.0
+offset_bottom = 85.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(0.597783, 0.201709, 0.255474, 1)
+theme_override_colors/font_color = Color(0.231373, 0.027451, 0.0509804, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/hover = SubResource("StyleBoxFlat_rhg2y")
+theme_override_styles/normal = SubResource("StyleBoxFlat_v4hv4")
+text = "We will fight them head On"
+
+[node name="B" type="Button" parent="Buttons/Kaal"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = 90.0
+offset_right = 200.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(0.597783, 0.201709, 0.255474, 1)
+theme_override_colors/font_color = Color(0.231373, 0.027451, 0.0509804, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/hover = SubResource("StyleBoxFlat_rhg2y")
+theme_override_styles/normal = SubResource("StyleBoxFlat_v4hv4")
+text = "We have to focus on strategy over strength"
+
+[node name="Questions" type="Label" parent="Buttons"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.0
+offset_top = -11.5
+offset_right = 37.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_7l60s")
+text = "    QUESTIONS    "
+
+[node name="Farmer" type="ItemList" parent="Buttons/Questions"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = 21.0
+offset_right = 200.0
+offset_bottom = 156.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/panel = SubResource("StyleBoxFlat_4qgac")
+item_count = 3
+item_0/text = "Does it not rain on your land?"
+item_1/text = "Is the soil fertile?"
+item_2/text = "What crops are you growing?"
+
+[node name="GOLD" type="Button" parent="Buttons"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = 136.0
+offset_right = -50.0
+offset_bottom = 286.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_c3wk1")
+text = "Give Gold For Seeds"
+
+[node name="PUNISH" type="Button" parent="Buttons"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 50.0
+offset_top = 136.0
+offset_right = 350.0
+offset_bottom = 286.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_c3wk1")
+text = "Punish For Stealing"
+
+[node name="Robbers" type="Label" parent="Buttons"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.0
+offset_top = -11.5
+offset_right = 37.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_7l60s")
+text = "    PICK ONE    "
+
+[node name="Punish" type="Button" parent="Buttons/Robbers"]
+custom_minimum_size = Vector2(200, 100)
+offset_left = -300.0
+offset_right = -100.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_bcryd")
+text = "Punish Robbers"
+
+[node name="Let Go" type="Button" parent="Buttons/Robbers"]
+custom_minimum_size = Vector2(200, 100)
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_bcryd")
+text = "Punish Gold Seller"
+
+[node name="Reduced Punishment" type="Button" parent="Buttons/Robbers"]
+custom_minimum_size = Vector2(200, 100)
+offset_left = 300.0
+offset_right = 500.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_bcryd")
+text = "Punish Both"
+
+[connection signal="pressed" from="Buttons/Kaal/A" to="." method="_on_a_pressed"]
+[connection signal="pressed" from="Buttons/Kaal/B" to="." method="_on_b_pressed"]
+[connection signal="item_selected" from="Buttons/Questions/Farmer" to="." method="_on_farmer_item_selected"]
+[connection signal="pressed" from="Buttons/GOLD" to="." method="_on_gold_pressed"]
+[connection signal="pressed" from="Buttons/PUNISH" to="." method="_on_punish_pressed"]

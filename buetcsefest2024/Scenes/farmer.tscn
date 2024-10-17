@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1j7ta0a1wknm"]
+
+[ext_resource type="Texture2D" uid="uid://cw52whx42qvgc" path="res://Assets/Characters/farmer.png" id="1_3lj44"]
+
+[node name="Farmer" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("1_3lj44")

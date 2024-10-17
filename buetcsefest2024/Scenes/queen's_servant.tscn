@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://fst4eajpohpv"]
+
+[ext_resource type="Texture2D" uid="uid://cxkjcfefa44eg" path="res://Assets/Characters/Daasi.png" id="1_jv4m2"]
+
+[node name="Queen\'s Servant" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("1_jv4m2")

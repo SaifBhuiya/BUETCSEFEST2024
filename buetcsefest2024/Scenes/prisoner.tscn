@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cexjkr0mcorow"]
+
+[ext_resource type="Texture2D" uid="uid://d23cr08a7liaw" path="res://Assets/Characters/Witch1.png" id="1_qjofs"]
+
+[node name="Prisoner" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("1_qjofs")

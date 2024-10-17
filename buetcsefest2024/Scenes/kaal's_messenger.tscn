@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://wpjgqmwohi06"]
+
+[ext_resource type="Texture2D" uid="uid://ck530h2wmr7lb" path="res://Assets/Characters/Kaals messenger.png" id="1_4xhbf"]
+
+[node name="Kaal\'s Messenger" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("1_4xhbf")

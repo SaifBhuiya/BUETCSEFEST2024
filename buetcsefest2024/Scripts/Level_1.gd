@@ -1,13 +1,16 @@
 extends Node2D
 var eventno = 0;
+var index ;
+@onready var kaalsmessenger: AudioStreamPlayer2D = $"../Kaalsmessenger"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	index = get_node("Characters_Dialogues/Council").index
 	match eventno:
 		#Advisor intro
 		0:
@@ -168,8 +171,10 @@ func _process(delta: float) -> void:
 					get_node("Characters_Dialogues/DialogueUI").get_child(1).visible = true
 					get_node("Characters_Dialogues/DialogueUI").get_child(0).get_child(0).text = "Advisor"
 					get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "I'll immediately get to work"
-			
-					eventno +=1
+					
+					if(Input.is_action_just_pressed("attack")):
+						Trust.gainTrust(2)
+						eventno += 1
 					
 				1:
 					get_node("Characters_Dialogues/Council").visible = false
@@ -180,7 +185,11 @@ func _process(delta: float) -> void:
 					get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "The coyote issue will be taken care of. On another note I can sense danger approaching. Something big is coming"
 					
 					get_node("Characters_Dialogues/Council").visible = false
-					eventno +=1
+				
+					if(Input.is_action_just_pressed("attack")):
+						
+						Trust.gainTrust(3)
+						eventno += 1
 				2:
 					get_node("Characters_Dialogues/Council").visible = false
 					get_node("Characters_Dialogues/Character/Doctor").visible = true
@@ -190,7 +199,9 @@ func _process(delta: float) -> void:
 					get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "I'll start making the coyote repellant"
 					
 					get_node("Characters_Dialogues/Council").visible = false
-					eventno +=1
+					if(Input.is_action_just_pressed("attack")):
+						Trust.gainTrust(5)
+						eventno += 1
 				3:
 					get_node("Characters_Dialogues/Council").visible = false
 					get_node("Characters_Dialogues/Character/Jester").visible = true
@@ -200,7 +211,9 @@ func _process(delta: float) -> void:
 					get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "I will get on it"
 					
 					get_node("Characters_Dialogues/Council").visible = false
-					eventno +=1
+					if(Input.is_action_just_pressed("attack")):
+						Trust.loseTrust(3)
+						eventno += 1
 				4:
 					get_node("Characters_Dialogues/Council").visible = false
 					get_node("Characters_Dialogues/Character/Warrior").visible = true
@@ -210,7 +223,9 @@ func _process(delta: float) -> void:
 					get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "Consider the job Done"
 					
 					get_node("Characters_Dialogues/Council").visible = false
-					eventno +=1
+					if(Input.is_action_just_pressed("attack")):
+						Trust.gainTrust(1)
+						eventno += 1
 		21:
 			get_node("Characters_Dialogues/Character/Advisor").visible = false
 			get_node("Characters_Dialogues/Character/Astrologer").visible = false
@@ -221,11 +236,278 @@ func _process(delta: float) -> void:
 	
 			get_node("Characters_Dialogues/DialogueUI").get_child(0).visible = false
 			get_node("Characters_Dialogues/DialogueUI").get_child(1).visible = true
-			get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "       [b]CASE 3 - Wild Coyote[/b]"
+			get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "       [b]CASE 3 - Robbers in the Wood[/b]"
+			if(Input.is_action_just_pressed("attack")):
+				eventno += 1
+		22:
+			get_node("Characters_Dialogues/DialogueUI").get_child(0).visible = true
+			get_node("Characters_Dialogues/Character/Gold Seller").visible = true
+			get_node("Characters_Dialogues/DialogueUI").get_child(0).get_child(0).text = "Gold Seller"
+			get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "I need Help. Where's King Thermos?? I have been robbed"
+			if(Input.is_action_just_pressed("attack")):
+				eventno += 1
+		23:
+			get_node("Characters_Dialogues/DialogueUI").get_child(0).visible = false
+			get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "[i]Father is no more. As the new crowned king I will be taking care of your problem[/i]"
+			if(Input.is_action_just_pressed("attack")):
+				eventno += 1
+		24:
+			get_node("Characters_Dialogues/DialogueUI").get_child(0).visible = true
+			get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "You?..... you are a mere kid!! Is there no one else...? sigh.."
+			if(Input.is_action_just_pressed("attack")):
+				eventno += 1
+		25:
+			get_node("Characters_Dialogues/DialogueUI").get_child(0).visible = false
+			get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "[i]I'll try my best to solve your issue[/i]"
+			if(Input.is_action_just_pressed("attack")):
+				eventno += 1
+		26:
+			get_node("Characters_Dialogues/DialogueUI").get_child(0).visible = true
+			get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "I dont need you to try. I need you catch those robbers and put them in cells"
+			if(Input.is_action_just_pressed("attack")):
+				eventno += 1
+		27:	
+			get_node("Characters_Dialogues/Character/Gold Seller").position = Vector2(-300, 0)
+			get_node("Characters_Dialogues/Character/Advisor").visible = true
+			get_node("Characters_Dialogues/Character/Advisor").position = Vector2(300, 0)
+			get_node("Characters_Dialogues/DialogueUI").get_child(0).get_child(0).text = "Advisor"
+			get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "May I remind you that you are infront of the current King so act accordingly"
+			if(Input.is_action_just_pressed("attack")):
+				eventno += 1
+		28:
+			get_node("Characters_Dialogues/DialogueUI").get_child(0).get_child(0).text = "Gold Seller"
+			get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "umm....I may have acted a bit out of order."
+			if(Input.is_action_just_pressed("attack")):
+				eventno += 1
+		29:
+			get_node("Characters_Dialogues/Character/Gold Seller").position = Vector2(0, 0)
+			get_node("Characters_Dialogues/Character/Advisor").visible = false
+			get_node("Characters_Dialogues/Character/Advisor").position = Vector2(0, 0)
+			
+			get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "I had gone to the next village for some business. On my way back through the forest I got jumped by some hooded robbers."
+			if(Input.is_action_just_pressed("attack")):
+				get_node("Characters_Dialogues/Character/Gold Seller").visible = false
+				eventno += 1
+		30:
+			if(index!=0):
+				get_node("Characters_Dialogues/Character/Advisor").visible = true
+				get_node("Characters_Dialogues/DialogueUI").get_child(0).get_child(0).text = "Advisor"
+				get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "We should lay a trap to capture the robbers while they least expect it."
+				if(Input.is_action_just_pressed("attack")):
+					eventno += 1
+			else:
+				eventno += 1
+		31:	
+			get_node("Characters_Dialogues/Character/Advisor").visible = false
+			if(index!= 1):
+				
+				get_node("Characters_Dialogues/Character/Astrologer").visible = true
+				get_node("Characters_Dialogues/DialogueUI").get_child(0).get_child(0).text = "Astrologer"
+				get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "Currently the only thing on my mind is the danger that I sense, Its getting close."
+				if(Input.is_action_just_pressed("attack")):
+					eventno += 1
+			else:
+				eventno += 1
+		32:
+			get_node("Characters_Dialogues/Character/Astrologer").visible = false
+			if(index!=2):
+				
+				get_node("Characters_Dialogues/Character/Doctor").visible = true
+				get_node("Characters_Dialogues/DialogueUI").get_child(0).get_child(0).text = "Doctor"
+				get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "I can make a gas bomb to smoke out the robbers from the forest."
+				if(Input.is_action_just_pressed("attack")):
+					eventno += 1
+			else:
+				eventno += 1
+		33:
+			get_node("Characters_Dialogues/Character/Doctor").visible = false
+			if(index!=3):
+				
+				get_node("Characters_Dialogues/Character/Jester").visible = true
+				get_node("Characters_Dialogues/DialogueUI").get_child(0).get_child(0).text = "Jester"
+				get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "I can infiltrate their band and drive them towards a trap"
+				if(Input.is_action_just_pressed("attack")):
+					eventno += 1
+			else:
+				eventno += 1
+		34:
+			get_node("Characters_Dialogues/Character/Jester").visible = false
+			get_node("Characters_Dialogues/Council").index = 99
+			if(index!=4):
+				
+				get_node("Characters_Dialogues/Character/Warrior").visible = true
+			
+				get_node("Characters_Dialogues/DialogueUI").get_child(0).get_child(0).text = "Warrior"
+				get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "We'll use force to bring the robbers to justice"
+				if(Input.is_action_just_pressed("attack")):
+					eventno += 1
+			else: 
+				eventno +=1
+		
+		35:
+			get_node("Characters_Dialogues/Character/Warrior").visible = false
+			get_node("Characters_Dialogues/DialogueUI").get_child(0).visible = false
+			get_node("Characters_Dialogues/DialogueUI").get_child(1).visible = false
+			get_node("Characters_Dialogues/Council").visible = true
+			
+			match get_node("Characters_Dialogues/Council").index:
+				0:
+					get_node("Characters_Dialogues/Council").visible = false
+					get_node("Characters_Dialogues/Character/Advisor").visible = true
+					get_node("Characters_Dialogues/DialogueUI").get_child(0).visible = true
+					get_node("Characters_Dialogues/DialogueUI").get_child(1).visible = true
+					get_node("Characters_Dialogues/DialogueUI").get_child(0).get_child(0).text = "Advisor"
+					get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "I'll immediately get to work"
+					
+					if(Input.is_action_just_pressed("attack")):
+						Trust.gainTrust(3)
+						eventno += 1
+					
+				1:
+					get_node("Characters_Dialogues/Council").visible = false
+					get_node("Characters_Dialogues/Character/Astrologer").visible = true
+					get_node("Characters_Dialogues/DialogueUI").get_child(0).visible = true
+					get_node("Characters_Dialogues/DialogueUI").get_child(1).visible = true
+					get_node("Characters_Dialogues/DialogueUI").get_child(0).get_child(0).text = "Astrologer"
+					get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = ".........Send anyone else but, you might need Advisor close to you for whats to come"
+					
+					get_node("Characters_Dialogues/Council").visible = false
+					if(Input.is_action_just_pressed("attack")):
+						eventno += 1
+				2:
+					get_node("Characters_Dialogues/Council").visible = false
+					get_node("Characters_Dialogues/Character/Doctor").visible = true
+					get_node("Characters_Dialogues/DialogueUI").get_child(0).visible = true
+					get_node("Characters_Dialogues/DialogueUI").get_child(1).visible = true
+					get_node("Characters_Dialogues/DialogueUI").get_child(0).get_child(0).text = "Doctor"
+					get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "I'll start making the smoke bomb"
+					
+					get_node("Characters_Dialogues/Council").visible = false
+					if(Input.is_action_just_pressed("attack")):
+						Trust.loseTrust(3)
+						eventno += 1
+				3:
+					get_node("Characters_Dialogues/Council").visible = false
+					get_node("Characters_Dialogues/Character/Jester").visible = true
+					get_node("Characters_Dialogues/DialogueUI").get_child(0).visible = true
+					get_node("Characters_Dialogues/DialogueUI").get_child(1).visible = true
+					get_node("Characters_Dialogues/DialogueUI").get_child(0).get_child(0).text = "Jester"
+					get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "I will get on it"
+					
+					get_node("Characters_Dialogues/Council").visible = false
+					if(Input.is_action_just_pressed("attack")):
+						Trust.gainTrust(5)
+						eventno += 1
+				4:
+					get_node("Characters_Dialogues/Council").visible = false
+					get_node("Characters_Dialogues/Character/Warrior").visible = true
+					get_node("Characters_Dialogues/DialogueUI").get_child(0).visible = true
+					get_node("Characters_Dialogues/DialogueUI").get_child(1).visible = true
+					get_node("Characters_Dialogues/DialogueUI").get_child(0).get_child(0).text = "Warrior"
+					get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "Consider the job Done"
+					
+					get_node("Characters_Dialogues/Council").visible = false
+					if(Input.is_action_just_pressed("attack")):
+						Trust.gainTrust(1)
+						eventno += 1
+		36:
+			get_node("Characters_Dialogues/Character/Advisor").visible = false
+			get_node("Characters_Dialogues/Character/Astrologer").visible = false
+			get_node("Characters_Dialogues/Character/Doctor").visible = false
+			get_node("Characters_Dialogues/Character/Jester").visible = false
+			get_node("Characters_Dialogues/Character/Warrior").visible = false
+			
+			get_node("Characters_Dialogues/DialogueUI").get_child(0).visible = true
+			get_node("Characters_Dialogues/DialogueUI").get_child(1).visible = true
+			get_node("Characters_Dialogues/DialogueUI").get_child(0).get_child(0).text = "Guard"
+			get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "An unknown person has come to see you"
+			
+			if(Input.is_action_just_pressed("attack")):
+				eventno += 1
+		37:
+			get_node("Characters_Dialogues/Character/Astrologer").visible = true
+			get_node("Characters_Dialogues/DialogueUI").get_child(0).get_child(0).text = "Astrologer"
+			get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "Danger.... It's...it's Here!"
+			if(kaalsmessenger.playing==false):
+				kaalsmessenger.play()
+				get_node("Start Main").stop()
 			if(Input.is_action_just_pressed("attack")):
 				eventno += 1
 			
+		38:
 			
+			get_node("Characters_Dialogues/Character/Kaal's Messenger").visible = true
+			get_node("Characters_Dialogues/Character/Astrologer").visible = false
+			get_node("Characters_Dialogues/DialogueUI").get_child(0).get_child(0).text = "??????"
+			get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "Hello my dear boy. Lord Kaal says sorry for your loss."
+			if(Input.is_action_just_pressed("attack")):
+				eventno += 1
+		39:
+			get_node("Characters_Dialogues/Character/Kaal's Messenger").position = Vector2(-300,0)
+			get_node("Characters_Dialogues/Character/Advisor").position = Vector2(300,0)
+			get_node("Characters_Dialogues/Character/Advisor").visible = true
+			get_node("Characters_Dialogues/DialogueUI").get_child(0).get_child(0).text = "Advisor"
+			get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "Kaa.. Kaaal??"
+			if(Input.is_action_just_pressed("attack")):
+				eventno += 1
+		40:
+			get_node("Characters_Dialogues/DialogueUI").get_child(0).get_child(0).text = "Kaal's ???????"
+			get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "I'm his messenger."
+			if(Input.is_action_just_pressed("attack")):
+				eventno += 1
+		41:
+			get_node("Characters_Dialogues/Character/Advisor").position = Vector2(0,0)
+			get_node("Characters_Dialogues/Character/Advisor").visible = false
+			get_node("Characters_Dialogues/DialogueUI").get_child(0).get_child(0).text = "Kaal's Messenger"
+			get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "Lord Kaal has sent me to issue you a warning. Give up your Palace and Kingdom within the next 3 days, Or he shall have to force it out of your hands."
+			if(Input.is_action_just_pressed("attack")):
+				eventno += 1		
+		42:
+			get_node("Characters_Dialogues/DialogueUI").get_child(0).get_child(0).text = "Kaal's Messenger"
+			get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "I'll leave you with that for now."
+			if(Input.is_action_just_pressed("attack")):
+				eventno += 1	
+		43:
+			kaalsmessenger.stop()
+			if(get_node("Main").playing == false):
+				get_node("Main").play()
+			get_node("Characters_Dialogues/Character/Kaal's Messenger").visible = false
+			get_node("Characters_Dialogues/DialogueUI").get_child(0).visible = false
+			get_node("Characters_Dialogues/Character/Advisor").visible = true
+			get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "[i]Who's Kaal? You seemed terrified when his name was said[/i]"
+			if(Input.is_action_just_pressed("attack")):
+				eventno += 1	
+		44:
+			get_node("Characters_Dialogues/DialogueUI").get_child(0).visible = true
+			get_node("Characters_Dialogues/DialogueUI").get_child(0).get_child(0).text = "Advisor"
+			get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "My Lord! Long Before you were born, Our Kingdom was attacked by the Dark Lord \"Kaal\"."
+			if(Input.is_action_just_pressed("attack")):
+				eventno += 1	
+		45:
+			get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "Your Father being the brave warrior he was, managed to defeat Kaal's Army. Kaal surrendered and a treaty was formed."
+			if(Input.is_action_just_pressed("attack")):
+				eventno += 1
+		46:
+			get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "What people don't know is that Our kingdom is built on top of the Gateway to Hell."
+			if(Input.is_action_just_pressed("attack")):
+				eventno += 1
+		47:
+			get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "Kaal wants to Open that gate and take over the world."
+			if(Input.is_action_just_pressed("attack")):
+				eventno += 1
+		48: 
+			get_node("Characters_Dialogues/DialogueUI").get_child(0).visible = false
+			get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "[i]I'll need to get to the bottom of this.[/i]"
+			if(Input.is_action_just_pressed("attack")):
+				eventno += 1
+		49:
+			get_node("Characters_Dialogues/Character/Advisor").visible = false
+			get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "       [b]COURT CLOSED[/b]"
+			if(Input.is_action_just_pressed("attack")):
+				eventno += 1
+
+		50:
+			get_tree().change_scene_to_file("res://Scenes/level_2.tscn")	
 			
 			
 
@@ -288,10 +570,14 @@ func _on_done_pressed() -> void:
 
 
 func _on_punish_a_pressed() -> void:
-	print("wrong Trust - 5")
+	
+	Trust.loseTrust(5)
+	print(Trust.Trust)
 	eventno +=1
 
 
 func _on_punish_b_pressed() -> void:
-	print("right Trust + 5")
+	
+	Trust.gainTrust(5)
+	print(Trust.Trust)
 	eventno +=1
