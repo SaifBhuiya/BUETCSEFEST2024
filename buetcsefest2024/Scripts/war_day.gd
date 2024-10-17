@@ -33,7 +33,7 @@ func _process(delta: float) -> void:
 						eventno+= 1
 		3:
 			get_node("Characters_Dialogues/DialogueUI").get_child(0).get_child(0).text = ""
-			if(Trust.Trust>55):
+			if(Trust.Trust>50):
 				get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "[i]Fear? You?? I think you are underestimating me KAAL![/i]"
 			else:
 				get_node("Characters_Dialogues/DialogueUI").get_child(1).get_child(0).text = "[i].....You are intimidating but I dont have any other options. Do I?[/i]"
@@ -44,7 +44,7 @@ func _process(delta: float) -> void:
 			
 			get_node("Characters_Dialogues/DialogueUI").visible = false
 			get_node("Options/Kaal").visible = true
-			if(Trust.Trust>60):
+			if(Trust.Trust>50):
 				get_node("Options/Kaal/A").text = "ATTACK (brave choice)"
 				get_node("Options/Kaal/B").text = "BARGAIN (coward choice)"
 			else:
